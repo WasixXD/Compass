@@ -11,3 +11,5 @@ I always was curious about how apps with terminal auth works, then i made one my
 
 # ▶️  You can Test at [Compass](https://compass-h5gl.onrender.com/)
 ## *Disclaimer* Dont use your actual password, because they are store as plain text, make up one 
+\
+# After creating an account clone the reposity and download the dependecys run the `client/main.js`
