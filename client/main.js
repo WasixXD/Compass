@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 import { program } from "commander"
 import terminalLink from "terminal-link"
-const url = "http://localhost:3300/"
+const url = "https://compass-h5gl.onrender.com/"
 
 
 program
