@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compass | Auth </title>
+  <style>
+
+
+  </style>
+  </head>
+  <body style="
+               width: 100vw;
+               height: 100vh;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+    ">
+    <main>
+      <h1 style="font-size: 4rem;">
+        AUTH YOUR ACCOUNT
+      </h1>
+      <button style="
+                     padding: 4rem;
+                     background-color: #66D1FF;
+                     color: white;
+                     font-size: 2rem;
+                     border: none;
+                     cursor: pointer;
+                     font-weight: 700;
+                     border-radius: 1rem;
+        "> AUTH </button>
+   </main>
+
+
+   <script>
+      const entries = window.location.href.split('/')
+      const uid = entries[entries.length - 1]
+      let btn = document.querySelector('button')
+      let h1 = document.querySelector('h1')
+
+
+      btn.addEventListener('click', auth)
+      async function auth() {
+        const url = `http://localhost:3300/auth/${uid}`
+
+        const response = await fetch(url, {
+          method: "PUT"
+        })
+        h1.innerHTML = "RETURN TO YOUR TERMINAL" 
+      }
+   </script>
+  </body>
+</html>
+
